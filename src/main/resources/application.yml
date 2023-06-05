@@ -4,10 +4,31 @@ server:
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/jpa
+    url: jdbc:mysql://192.168.55.1:3306/jpa
     username: taerin
     password: '0000'
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
+#  profiles:
+#    active: ${spring.profiles.active@
+#    active: @spring.profiles.active@
+
+---
+spring:
+  config:
+    activate:
+      on-profile: default # pom.xml에 적은 이름과 매핑
+  profile:
+    include:
+      - default # yml실제 파일명과 매핑 (application-default.yml) 파일명은 camelCase 추천 구분자는 비추천
+
+---
+spring:
+  config:
+    activate:
+      on-profile: kind
+  profile:
+    include:
+      - kind

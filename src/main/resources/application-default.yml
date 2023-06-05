@@ -1,0 +1,7 @@
+# 기본 환경(로컬)에서 적용되는 DB 설정
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jpa
+    username: taerin
+    password: '0000'
