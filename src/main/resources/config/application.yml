@@ -1,0 +1,18 @@
+server:
+  port: 8000
+
+spring:
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.55.1:3306/jpa
+#    username: taerin
+#    password: '0000'
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  profiles:
+    active: default
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher # swagger

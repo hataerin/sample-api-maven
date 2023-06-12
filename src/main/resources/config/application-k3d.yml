@@ -1,0 +1,9 @@
+# k3d 클러스터에서 적용되는 DB 설정
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://host.k3d.internal:3305/jpa
+    username: taerin
+    password: 1234
+
+

@@ -1,4 +1,9 @@
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: board-api
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,9 +22,11 @@ spec:
         app: board-api
     spec:
       # Define Container Infomations
+      nodeSelector:
+        key: api
       containers:
         - name: board-api
-          image: hotoron/demo-api:2.3-3-dockerDB
+          image: hotoron/demo-api:v4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
