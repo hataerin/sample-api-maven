@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: board-api-deployment  # Deployment Name
+  namespace: board-api        # Namespace Mapping
+  labels:
+    app: board-api            # Label
+spec:
+  replicas: 3                 # Amount of Replicaset
+  selector:
+    matchLabels:
+      app: board-api
+  template:
+    metadata:
+      labels:
+        app: board-api
+    spec:
+      # Define Container Infomations
+      containers:
+        - name: board-api
+          image: hotoron/demo-api:2.3-3-dockerDB
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000

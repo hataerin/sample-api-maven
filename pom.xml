@@ -16,26 +16,24 @@
     <properties>
         <java.version>17</java.version>
     </properties>
-    <profile>
-        <!--            application-default , 프로파일 이름-->
-        <id>default</id>
-        <activation>
-            <activeByDefault>
-                true
-            </activeByDefault>
-        </activation>
-        <properties>
-            <spring.profiles.active>
-                default
-            </spring.profiles.active>
-        </properties>
-    </profile>
-    <profile>
-        <id>kind</id>
-        <properties>
-            <spring.profiles.active>kind</spring.profiles.active>
-        </properties>
-    </profile>
+    <profiles>
+        <profile>
+            <!--pplication-default , 프로파일 이름-->
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>default</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>kind</id>
+            <properties>
+                <spring.profiles.active>kind</spring.profiles.active>
+            </properties>
+        </profile>
+    </profiles>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -94,6 +92,10 @@
                         </exclude>
                     </excludes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

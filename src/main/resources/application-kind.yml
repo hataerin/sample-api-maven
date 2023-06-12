@@ -2,6 +2,6 @@
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.55.1:3306/jpa
+    url: jdbc:mysql://host.docker.internal:3305/jpa
     username: taerin
-    password: '0000'
+    password: 1234
