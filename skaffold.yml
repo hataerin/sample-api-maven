@@ -13,9 +13,9 @@ profiles:
           # - image: demo-api   # local(로컬/push없이 실행만)
           jib:
             args:
-              - -DskipTests
+              - -DskipTests # maven테스트 패스하겠다
               - "-Djib.container.environment=SPRING_PROFILES_ACTIVE=k3d"  # jib 플러그인을 통해 dev profile에 대해 수행
-            fromImage: docker.io/library/eclipse-temurin:17-jre-alpine         # 실행을 위한 runtime image
+            fromImage: docker.io/library/eclipse-temurin:17-jre-alpine         # 실행을 위한 runtime image, jre가 더 가벼워서 jdk일 필요없움
             #fromImage: docker.io/library/openjdk:11         # 실행을 위한 runtime image
     deploy:
       kubectl:

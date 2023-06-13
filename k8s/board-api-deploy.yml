@@ -22,8 +22,6 @@ spec:
         app: board-api
     spec:
       # Define Container Infomations
-      nodeSelector:
-        key: api
       containers:
         - name: board-api
           image: hotoron/demo-api:v4
