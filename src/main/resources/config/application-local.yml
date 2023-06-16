@@ -1,3 +1,7 @@
+server:
+  port: 8000
+
+
 # 기본 환경(로컬)에서 적용되는 DB 설정
 spring:
   datasource:

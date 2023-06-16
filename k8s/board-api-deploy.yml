@@ -24,7 +24,7 @@ spec:
       # Define Container Infomations
       containers:
         - name: board-api
-          image: hotoron/demo-api:v4
+          image: docker.io/hotoron/demo-api:v4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000

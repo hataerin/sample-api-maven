@@ -1,3 +1,7 @@
+server:
+  port: 8000
+
+
 # kind 클러스터에서 적용되는 DB 설정
 spring:
   datasource:

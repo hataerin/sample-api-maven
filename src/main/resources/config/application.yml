@@ -1,5 +1,3 @@
-server:
-  port: 8000
 
 spring:
 #  datasource:
@@ -12,7 +10,7 @@ spring:
     generate-ddl: true
     show-sql: true
   profiles:
-    active: default
+    active: local
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher # swagger
